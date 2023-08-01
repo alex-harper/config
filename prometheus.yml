@@ -12,7 +12,7 @@ scrape_configs:
       - targets: ['node-exporter:9100']
 
 remote_write:
-  - url: {prometheus_write_endpoint}
+  - url: ${prometheus_write_endpoint}
     basic_auth:
-      username: {grafana_user}
-      password: {grafana_key}
+      username: ${grafana_user}
+      password: ${grafana_key}
